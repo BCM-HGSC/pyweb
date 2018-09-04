@@ -1,0 +1,22 @@
+version: "3"
+services:
+  proxy:
+    image: bcmhgscsub/proxyx:dev
+    volumes:
+      - ./proxyx/nginx:/nginx
+    ports:
+      - 80:80
+    networks:
+      - webnet
+  app:
+    image: bcmhgscsub/pyweb:dev
+    environment:
+      GUNICORN_RELOAD: 'True'
+    volumes:
+      - ./pyweb/app:/app
+    ports:
+      - 8000:8000
+    networks:
+      - webnet
+networks:
+  webnet:

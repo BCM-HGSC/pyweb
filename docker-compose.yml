@@ -1,0 +1,14 @@
+version: "3"
+services:
+  proxy:
+    image: bcmhgscsub/proxyx:latest
+    ports:
+      - 80:80
+    networks:
+      - webnet
+  app:
+    image: bcmhgscsub/pyweb:latest
+    networks:
+      - webnet
+networks:
+  webnet:
