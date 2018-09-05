@@ -1,3 +1,10 @@
+import logging
+
+from flask import Flask, Response
+
+
+app = Flask(__name__)
+
 DATA = b"""\
 Hello world from Gunicorn!
 
@@ -13,9 +20,7 @@ It's getting less fun now.
 I can keep going.
 """
 
-def app(environ, start_response):
-    start_response("200 OK", [
-        ("Content-Type", "text/plain"),
-        ("Content-Length", str(len(DATA)))
-    ])
-    return iter([DATA])
+@app.route('/')
+def hello_world():
+    logging.info('hello from app.hello_world')
+    return Response(DATA, mimetype='text/plain')
