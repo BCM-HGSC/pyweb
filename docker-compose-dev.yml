@@ -1,3 +1,9 @@
+# Run as:
+# docker stack deploy -c docker-compose-dev.yml dev
+# Sets Gunicorn to automatically reload when app.py change detected
+# Mounts these source directories:
+#     proxyx/nginx
+#     pyweb/app
 version: "3"
 services:
   proxy:
