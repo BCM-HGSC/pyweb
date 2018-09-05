@@ -5,6 +5,7 @@ from sys import stderr
 print('hello from /app/config.py', file=stderr)
 
 bind = '0.0.0.0:8000'
+pidfile = '/var/run/gunicorn.pid'
 
 
 # Load any relevant environment variables as settings...
