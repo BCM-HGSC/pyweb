@@ -11,6 +11,8 @@ deployments should use fixed tags.
 
 ## proxyx
 
+https://hub.docker.com/r/bcmhgscsub/proxyx/
+
 This image is a simple [nginx](https://hub.docker.com/r/_/nginx/) reverse proxy.
 
 Serves: port 80
@@ -35,6 +37,8 @@ See:
 
 ## pyweb
 
+https://hub.docker.com/r/bcmhgscsub/pyweb/
+
 This image combines Gunicorn with Flask, starting with
 [Debian](https://hub.docker.com/r/_/nginx/). The necessary Python components
 are copied from a much heavier "builder" image based on
@@ -57,6 +61,8 @@ See:
 * https://hub.docker.com/r/continuumio/miniconda3/
 
 ## builder
+
+https://hub.docker.com/r/bcmhgscsub/pywebbuilder/
 
 This image uses
 [continuumio/miniconda3](https://hub.docker.com/r/continuumio/miniconda3/)
