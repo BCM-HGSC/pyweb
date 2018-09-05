@@ -8,16 +8,10 @@ app = Flask(__name__)
 DATA = b"""\
 Hello world from Gunicorn!
 
+And Flask!
+
 Replace the contents of /app/app.py
-with your WSGI application.
-
-I just made words with my hands!
-
-I did it again!
-
-It's getting less fun now.
-
-I can keep going.
+with your Flask or WSGI application.
 """
 
 @app.route('/')
